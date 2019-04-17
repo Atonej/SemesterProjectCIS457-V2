@@ -19,8 +19,6 @@ import javax.sound.sampled.Mixer;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.TargetDataLine;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 
 public class Server {
@@ -37,6 +35,7 @@ static Mixer.Info[] mixerInfo = AudioSystem.getMixerInfo();
 
 Server() throws LineUnavailableException, HeadlessException, UnknownHostException {
 
+    
     try {
         Mixer mixer_ = AudioSystem.getMixer(mixerInfo[1]);   // Select Available Hardware Devices for the speaker, for my Notebook it is number 1
         audioFormat = getAudioFormat();
@@ -54,7 +53,22 @@ Server() throws LineUnavailableException, HeadlessException, UnknownHostExceptio
 
         }
 
-    } catch (IOException e) {
+    }
+    
+    catch (LineUnavailableException e) {
+    	e.printStackTrace();
+    }
+    
+    catch (HeadlessException e) {
+    	
+    	e.printStackTrace();
+    }
+    
+    catch (UnknownHostException e){
+    	
+    }
+    
+    catch (IOException e) {
 
         e.printStackTrace();
     }
