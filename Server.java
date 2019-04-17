@@ -22,18 +22,18 @@ import javax.swing.ImageIcon;
 
 
 public class Server {
-ServerSocket MyService;
-Socket clientSocket = null;
-InputStream input;
-TargetDataLine targetDataLine;
-OutputStream out;
-AudioFormat audioFormat;
-SourceDataLine sourceDataLine;
+private ServerSocket MyService;
+private Socket clientSocket = null;
+private InputStream input;
+private TargetDataLine targetDataLine;
+private OutputStream out;
+private AudioFormat audioFormat;
+private SourceDataLine sourceDataLine;
 int Size = 10000;
 byte tempBuffer[] = new byte[Size];
 static Mixer.Info[] mixerInfo = AudioSystem.getMixerInfo();
 
-Server() throws LineUnavailableException, HeadlessException, UnknownHostException {
+Server() {
 
     
     try {

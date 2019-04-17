@@ -16,15 +16,15 @@ import javax.sound.sampled.TargetDataLine;
 
 public class Client {
 	
-	boolean stopCapture = false;
-	ByteArrayOutputStream byteArrayOutputStream;
-	AudioFormat audioFormat;
-	TargetDataLine targetDataLine;
-	AudioInputStream audioInputStream;
-	BufferedOutputStream out = null;
-	BufferedInputStream in = null;
-	Socket sock = null;
-	SourceDataLine sourceDataLine;
+	private boolean stopCapture = false;
+	private ByteArrayOutputStream byteArrayOutputStream;
+	private AudioFormat audioFormat;
+	private TargetDataLine targetDataLine;
+	private AudioInputStream audioInputStream;
+	private BufferedOutputStream out = null;
+	private BufferedInputStream in = null;
+	private Socket sock = null;
+	private SourceDataLine sourceDataLine;
 	/**
 	 * Launch the application.
 	 * @param args
