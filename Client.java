@@ -14,7 +14,7 @@ import javax.sound.sampled.TargetDataLine;
 
 
 
-public class Clientx {
+public class Client {
 	
 	boolean stopCapture = false;
 	ByteArrayOutputStream byteArrayOutputStream;
@@ -31,8 +31,8 @@ public class Clientx {
 	 */
 	public static void main(String[] args) {
 		
-			    Clientx tx = new Clientx();
-			    tx.captureAudio();
+			    Client c = new Client();
+			    c.captureAudio();
 	}
 	private void captureAudio() {
 	    try {

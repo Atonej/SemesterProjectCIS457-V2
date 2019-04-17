@@ -36,26 +36,6 @@ byte tempBuffer[] = new byte[Size];
 static Mixer.Info[] mixerInfo = AudioSystem.getMixerInfo();
 
 Server() throws LineUnavailableException, HeadlessException, UnknownHostException {
-	JFrame.setDefaultLookAndFeelDecorated(true);
-    JFrame frame = new JFrame("Network Phone");
-    JLabel label = new JLabel("Server ip: "+InetAddress.getLocalHost().getHostAddress(), JLabel.CENTER );
-    frame.getContentPane().add( label );
-    
-    JLabel lblNewLabel = new JLabel("");
-    lblNewLabel.setIcon(new ImageIcon("F:\\Eclipse\\Eclipse_for_Java\\1.gif"));
-    frame.getContentPane().add(lblNewLabel, BorderLayout.EAST);
-    
-    frame.setSize(600,400);
-    frame.setVisible(true);
-    ImageIcon img = new ImageIcon("0.png");
-    frame.setIconImage(img.getImage());
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
-
-
-    
-    ImageIcon imageIcon = new ImageIcon("0.png");
-    JLabel label1 = new JLabel(imageIcon);
 
     try {
         Mixer mixer_ = AudioSystem.getMixer(mixerInfo[1]);   // Select Available Hardware Devices for the speaker, for my Notebook it is number 1
